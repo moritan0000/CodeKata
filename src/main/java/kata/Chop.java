@@ -1,4 +1,4 @@
-package kata02;
+package kata;
 
 class Chop {
 
