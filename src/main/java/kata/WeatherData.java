@@ -6,9 +6,8 @@ class WeatherData {
 
     int weather() {
         try {
-
-            File f = new File("C:\\Users\\HirotakaMorishita\\IdeaProjects\\" +
-                    "CodeKata\\src\\main\\resources\\weather.dat");
+            String currentDir = new File("").getAbsolutePath();
+            File f = new File(currentDir + "/src/main/resources/weather.dat");
             FileReader fr = new FileReader(f);
             BufferedReader br = new BufferedReader(fr);
 
