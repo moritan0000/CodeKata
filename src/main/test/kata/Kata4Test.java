@@ -1,9 +1,10 @@
 package kata;
 
 import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class WeatherDataTest {
+class Kata4Test {
 
     @BeforeEach
     void setUp() {
@@ -15,12 +16,9 @@ class WeatherDataTest {
 
     @Test
     void weatherTest() {
-        WeatherData a = new WeatherData();
-        assertEquals(-1,a.weather());
     }
+
     @Test
-    void weatherTest2(){
-        WeatherData a = new WeatherData();
-        a.weather();
+    void weatherTest2() {
     }
 }

@@ -1,8 +1,8 @@
 package kata;
 
-class Chop {
+public class Chop {
 
-    int chop(final int x, final int[] array) {
+    public int chop(final int x, final int[] array) {
 
         int ini = 0;
         int fin = array.length - 1;
