@@ -1,6 +1,6 @@
 package kata;
 
-public class Chop {
+public class KarateChop {
 
     public int chop(final int x, final int[] array) {
 

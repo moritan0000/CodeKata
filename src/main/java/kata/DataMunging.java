@@ -1,17 +1,23 @@
 package kata;
 
-import java.io.*;
+import lombok.Getter;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Kata4 {
+@Getter
+public class DataMunging {
 
     public static String weatherUrl = "http://codekata.com/data/04/weather.dat";
     public static String footballUrl = "http://codekata.com/data/04/football.dat";
 
-    static List<String> fetchUrl(String urlString) {
+    public static List<String> fetchUrl(final String urlString) {
 
         HttpURLConnection con = null;
         BufferedReader reader = null;
@@ -56,10 +62,15 @@ public class Kata4 {
 
     public static void main(String[] args) {
 
-        List<String> weatherData = new ArrayList<>(Kata4.fetchUrl(weatherUrl));
-        weatherData.stream().forEach(v -> System.out.println(v));
+        List<String> weatherData = new ArrayList<>(DataMunging.fetchUrl(weatherUrl));
+        weatherData = weatherData.subList(3, weatherData.size());
+        weatherData.forEach(System.out::println);
 
-        List<String> footballData = new ArrayList<>(Kata4.fetchUrl(footballUrl));
-        footballData.stream().forEach(v -> System.out.println(v));
+
+//        int[] maxTemp = new int[]{weatherData.stream().map(v->v.substring())};
+
+
+        List<String> footballData = new ArrayList<>(DataMunging.fetchUrl(footballUrl));
+        footballData.forEach(System.out::println);
     }
 }
