@@ -1,6 +1,6 @@
 package kata;
 
-import lombok.Getter;
+import lombok.Data;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
+@Data
 public class DataMunging {
 
     public static String weatherUrl = "http://codekata.com/data/04/weather.dat";

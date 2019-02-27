@@ -1,10 +1,17 @@
 package kata;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class KarateChopTest {
+
+    @BeforeAll
+    void initial() {
+    }
 
     @BeforeEach
     void setUp() {
@@ -16,8 +23,7 @@ class KarateChopTest {
 
     @Test
     void test01() {
-        KarateChop a = new KarateChop();
-        assertEquals(-1, a.chop(3, new int[]{}));
+        assertEquals(-1, new KarateChop().chop(3, new int[]{}));
     }
 
     @Test
